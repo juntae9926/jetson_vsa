@@ -86,7 +86,7 @@ class TrtModel:
 if __name__ == "__main__":
  
     batch_size = 1
-    model = TrtModel("../inception.engine")
+    model = TrtModel("../model/inception.engine")
     print(model)
     shape = model.engine.get_binding_shape(0)
     data1 = np.random.randint(0,255,(batch_size,*shape[1:]))/255
